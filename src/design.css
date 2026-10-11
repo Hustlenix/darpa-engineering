@@ -8,8 +8,8 @@
   --line: #d5d5cb;
   --navy: #252722;
   --navy-light: #dedfd5;
-  --blue: #ad4421;
-  --blue-dark: #963b1d;
+  --blue: #1660a1;
+  --blue-dark: #1b4384;
   --mono: 'Courier New', monospace;
   --page-width: 1320px;
   --gutter: clamp(20px, 4.5vw, 76px);
@@ -103,7 +103,7 @@ h4 {
   padding-block: 55px 49px;
 }
 .hero-cover h1 {
-  font-size: clamp(66px, 8.7vw, 132px);
+  font-size: clamp(64px, 6.8vw, 100px);
   line-height: 0.91;
   letter-spacing: -0.075em;
   font-weight: 500;

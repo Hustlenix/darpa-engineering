@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const links = [
+  { label: 'Inside DARPA', href: '#inside-darpa' },
   { label: 'Capabilities', href: '#capabilities' },
   { label: 'Parts', href: '#products' },
   { label: 'Company', href: '#company' },

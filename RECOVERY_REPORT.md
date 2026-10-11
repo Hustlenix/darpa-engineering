@@ -40,4 +40,14 @@ Media is reused from the existing repository. No AI factory photographs, custome
 
 ## Remaining limits
 
+### Scroll and 3D revision
+
+The owner requested slower smooth scrolling and an exploded 3D explanation after reviewing the first design. Codex added Lenis and Three.js, a separate lazy-loaded WebGL scene, and six detailed process chapters. Casting is explicitly a separate route rather than a stage after stamping. The models are schematic and do not claim to represent production drawings or specific company machines.
+
+The 3D view supports assembly/explosion, mouse and arrow-key rotation, reset, scroll-driven stage selection and manual stage buttons. Reduced-motion preferences are applied live: smooth scrolling and automatic stage switching stop, model transitions become immediate, and explanations remain readable. Touch scroll is native. Rendering settles rather than rotating continuously, pauses off-screen, and all scene resources/listeners are released on unmount.
+
+Browser checks verified an actual WebGL canvas, all six scroll-driven states, assembly/explosion, keyboard/reset controls, layout at 320/375/768/1024/1440px, and changing reduced-motion preferences without a reload. No page errors were observed. The large Three.js chunk is dynamically imported when the section approaches the viewport; it is an intentional additional download for the requested feature.
+
+Production validation repeated successfully after the revision. The WebGL-disabled browser displayed its fallback and all six explanatory chapters. Existing division interactions, menu focus and contact validation also passed regression checks. At a 375 × 900 viewport, the sticky viewer occupied vertical coordinates 74–554px, leaving space for the explanatory text below. Physical-phone GPU performance remains untested.
+
 No real email was sent. These checks do not establish full WCAG conformance, real-device behavior, current company certification, official media-use permission or Stardance acceptance. GitHub publication status must be verified separately; local build success is not deployment evidence.

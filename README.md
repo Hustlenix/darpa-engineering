@@ -8,6 +8,8 @@ The October 11 redesign uses existing company photographs and product media, a w
 
 ## AI assistance and authorship
 
+The latest revision adds a lazy-loaded Three.js manufacturing study. Scroll through six chapters to see an exploded stamping tool, a sheet blank, forming, a separate casting route, tool-room machining and a finished conceptual component. The model supports assembly/explosion, mouse rotation, keyboard rotation and reset. Lenis smooths wheel scrolling; reduced-motion mode disables scrolling inertia and automatic stage switching. Touch scrolling remains native. A text/SVG fallback remains available when WebGL cannot initialize.
+
 The October 11 redesign was implemented by Codex with the project owner's authorization. AI contributed the updated React components, copy, CSS, bug fixes, documentation and browser-check scripts. These changes must not be described as independently handwritten by the owner. File-level authorship of the earlier source is not established by commit metadata. This repository makes no claim to satisfy a particular Stardance AI-use percentage.
 
 ## Local development

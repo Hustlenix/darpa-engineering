@@ -14,21 +14,23 @@ export default function Hero() {
       </div>
       <div className="wrap hero-heading-row">
         <h1 id="hero-heading">
-          Built around
+          Stampings.
           <br />
-          the <span>part.</span>
+          Castings.
+          <br />
+          <span>Tooling.</span>
         </h1>
         <div className="hero-summary">
           <p>
-            Sheet-metal stampings. Non-ferrous castings. The tooling that makes
-            them possible.
+            DARPA Engineering manufactures metal components in Hosur, Tamil
+            Nadu.
           </p>
           <p className="hero-summary-note">
-            Manufacturing and in-house tool design, from our shop floor in
-            Hosur.
+            Sheet-metal stamping, non-ferrous casting, and the tools behind both
+            — designed and made in-house.
           </p>
-          <a className="button button--primary" href="#capabilities">
-            Explore our capabilities <span aria-hidden="true">↗</span>
+          <a className="button button--primary" href="#inside-darpa">
+            See how it works <span aria-hidden="true">↓</span>
           </a>
         </div>
       </div>
@@ -49,11 +51,11 @@ export default function Hero() {
           </figcaption>
         </figure>
         <a className="hero-contact-card" href="#contact">
-          <span className="eyebrow">Have a component in mind?</span>
+          <span className="eyebrow">Manufacturing enquiries</span>
           <strong>
-            Let’s talk
+            Bring your
             <br />
-            through it.
+            drawing.
           </strong>
           <span className="hero-card-arrow" aria-hidden="true">
             ↗
