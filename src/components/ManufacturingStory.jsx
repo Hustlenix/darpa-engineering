@@ -229,7 +229,7 @@ export default function ManufacturingStory() {
             <span>{chapters[active].annotation}</span>
           </div>
           <div className="story-viewer-controls">
-            <button
+            {[0, 3, 4].includes(active) && <button
               type="button"
               aria-pressed={exploded}
               onClick={() => setExploded((value) => !value)}
@@ -237,7 +237,7 @@ export default function ManufacturingStory() {
             >
               {exploded ? 'Assemble view' : 'Explode view'}{' '}
               <span aria-hidden="true">↗</span>
-            </button>
+            </button>}
             <button
               type="button"
               onClick={() => viewerRef.current?.resetView()}
@@ -245,11 +245,13 @@ export default function ManufacturingStory() {
             >
               Reset angle
             </button>
+            <button type="button" aria-label="Rotate model left" onClick={() => viewerRef.current?.rotate('left')} disabled={status !== 'ready'}>↶</button>
+            <button type="button" aria-label="Rotate model right" onClick={() => viewerRef.current?.rotate('right')} disabled={status !== 'ready'}>↷</button>
           </div>
           <p className="story-model-note">
             Illustrative models · not production drawings.{' '}
             {status === 'ready' &&
-              'Drag to rotate. Use arrow keys when the view is focused.'}
+              'Rotate with the buttons, mouse drag, or arrow keys when the view is focused.'}
           </p>
           <div
             className="story-stage-nav"

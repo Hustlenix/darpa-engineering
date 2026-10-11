@@ -100,6 +100,7 @@
 }
 .story-viewer-controls {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 0 20px 16px;
 }

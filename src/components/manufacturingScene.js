@@ -408,6 +408,11 @@ export function createManufacturingScene(host) {
       positionCamera()
       invalidate()
     },
+    rotate(direction) {
+      azimuth += direction === 'left' ? .2 : -.2
+      positionCamera()
+      invalidate()
+    },
     dispose() {
       disposed = true
       cancelAnimationFrame(frame)
