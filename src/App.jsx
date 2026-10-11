@@ -7,6 +7,8 @@ import Industries from './components/Industries'
 import Process from './components/Process'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ProductLibrary from './components/ProductLibrary'
+import './design.css'
 
 export default function App() {
   useEffect(() => {
@@ -39,6 +41,7 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <Services />
+        <ProductLibrary />
         <About />
         <Industries />
         <Process />
