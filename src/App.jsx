@@ -49,8 +49,9 @@ export default function App() {
       </a>
       <Navbar />
       <main id="main-content">
-        <Hero />
+        <div id="home" />
         <ManufacturingStory />
+        <Hero />
         <Services />
         <ProductLibrary />
         <About />

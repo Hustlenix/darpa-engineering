@@ -181,12 +181,12 @@ export default function ManufacturingStory() {
     >
       <div className="wrap story-intro">
         <div>
-          <p className="eyebrow">Inside the process</p>
-          <h2 id="story-heading">
+          <p className="eyebrow">DARPA Engineering / Hosur, India</p>
+          <h1 id="story-heading">
             Take it apart.
             <br />
             Understand the work.
-          </h2>
+          </h1>
         </div>
         <p>
           Follow the tooling, the material and the manufacturing route. Scroll

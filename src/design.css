@@ -102,14 +102,14 @@ h4 {
   gap: 65px;
   padding-block: 55px 49px;
 }
-.hero-cover h1 {
+.hero-cover #hero-heading {
   font-size: clamp(64px, 6.8vw, 100px);
   line-height: 0.91;
   letter-spacing: -0.075em;
   font-weight: 500;
   margin: 0;
 }
-.hero-cover h1 span {
+.hero-cover #hero-heading span {
   color: var(--blue-dark);
   display: inline;
 }
@@ -743,7 +743,7 @@ h4 {
     padding-block: 40px 32px;
     gap: 30px;
   }
-  .hero-cover h1 {
+  .hero-cover #hero-heading {
     font-size: clamp(64px, 12.4vw, 95px);
   }
   .hero-summary {

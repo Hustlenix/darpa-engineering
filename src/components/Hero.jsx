@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       className="hero hero-cover"
-      id="home"
+      id="factory"
       aria-labelledby="hero-heading"
     >
       <div className="wrap hero-topline">
@@ -13,13 +13,13 @@ export default function Hero() {
         <span>HOSUR, TAMIL NADU · EST. 2011</span>
       </div>
       <div className="wrap hero-heading-row">
-        <h1 id="hero-heading">
+        <h2 id="hero-heading">
           Stampings.
           <br />
           Castings.
           <br />
           <span>Tooling.</span>
-        </h1>
+        </h2>
         <div className="hero-summary">
           <p>
             DARPA Engineering manufactures metal components in Hosur, Tamil
