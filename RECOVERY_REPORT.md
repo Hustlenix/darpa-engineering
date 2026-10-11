@@ -42,6 +42,8 @@ Media is reused from the existing repository. No AI factory photographs, custome
 
 ### Scroll and 3D revision
 
+The opening was subsequently refined into the company homepage: a clear Hosur manufacturing introduction and enquiry/process links sit beside a larger, frameless exploded model. The explanatory title above the model was removed, mobile reading order was adapted, and the 3D ground became a subtle shadow/grid rather than a bright panel. One page H1 is retained and the factory-photography section follows the explainer. Desktop and mobile screenshots were inspected, with zero horizontal overflow at the five documented widths.
+
 The owner requested slower smooth scrolling and an exploded 3D explanation after reviewing the first design. Codex added Lenis and Three.js, a separate lazy-loaded WebGL scene, and six detailed process chapters. Casting is explicitly a separate route rather than a stage after stamping. The models are schematic and do not claim to represent production drawings or specific company machines.
 
 The 3D view supports assembly/explosion, mouse and arrow-key rotation, reset, scroll-driven stage selection and manual stage buttons. Reduced-motion preferences are applied live: smooth scrolling and automatic stage switching stop, model transitions become immediate, and explanations remain readable. Touch scroll is native. Rendering settles rather than rotating continuously, pauses off-screen, and all scene resources/listeners are released on unmount.

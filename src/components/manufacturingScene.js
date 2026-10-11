@@ -230,11 +230,7 @@ export function createManufacturingScene(host) {
 
   const ground = new THREE.Mesh(
     new THREE.PlaneGeometry(30, 30),
-    new THREE.MeshStandardMaterial({
-      color: '#142725',
-      roughness: 1,
-      metalness: 0.1,
-    }),
+    new THREE.ShadowMaterial({ opacity: 0.2 }),
   )
   ground.rotation.x = -Math.PI / 2
   ground.position.y = -1.85
@@ -409,7 +405,7 @@ export function createManufacturingScene(host) {
       invalidate()
     },
     rotate(direction) {
-      azimuth += direction === 'left' ? .2 : -.2
+      azimuth += direction === 'left' ? 0.2 : -0.2
       positionCamera()
       invalidate()
     },

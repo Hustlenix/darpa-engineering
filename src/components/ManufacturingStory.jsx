@@ -4,12 +4,12 @@ import './manufacturing-story.css'
 const chapters = [
   {
     id: 'tool-design',
-    label: 'Tool design',
-    heading: 'Start with the tool.',
-    text: 'The geometry of a component determines the tooling it needs. DARPA designs tooling in-house using SolidWorks and AutoCAD, then manufactures tools for stamping and non-ferrous casting.',
+    label: 'Inside DARPA',
+    heading: 'Metal parts.\nMade in Hosur.',
+    text: 'DARPA Engineering manufactures sheet-metal stampings and non-ferrous castings, with the tools designed and made in-house.',
     detail:
-      'The model opens up to reveal the upper shoe, punch, guide posts, lower die and base. Each member has a different job in supporting or shaping the part.',
-    tags: ['In-house design', 'SolidWorks & AutoCAD'],
+      'Scroll to open up the tooling and follow the manufacturing process. The upper shoe, punch, guide posts and die each play a different role in shaping a component.',
+    tags: ['Stampings', 'Non-ferrous castings', 'Tooling'],
     annotation: 'Upper shoe / punch / guide posts / die / base',
     visual: 'Exploded stamping tool',
   },
@@ -179,26 +179,16 @@ export default function ManufacturingStory() {
       id="inside-darpa"
       aria-labelledby="story-heading"
     >
-      <div className="wrap story-intro">
-        <div>
-          <p className="eyebrow">DARPA Engineering / Hosur, India</p>
-          <h1 id="story-heading">
-            Take it apart.
-            <br />
-            Understand the work.
-          </h1>
-        </div>
-        <p>
-          Follow the tooling, the material and the manufacturing route. Scroll
-          to move through the explanation, or choose a stage below.
-        </p>
+      <div className="wrap story-topline">
+        <p className="eyebrow">DARPA Engineering · The True Engineering</p>
+        <span>Hosur, Tamil Nadu / India</span>
       </div>
       <div
         className={`wrap story-layout${reduced ? ' story-layout--reduced' : ''}`}
       >
         <div className="story-viewer">
           <div className="story-viewer-top">
-            <span>DARPA / ENGINEERING STUDY</span>
+            <span>INSIDE THE TOOLING</span>
             <span aria-hidden="true">0{active + 1} / 06</span>
           </div>
           <div className="story-canvas" ref={hostRef} />
@@ -229,15 +219,17 @@ export default function ManufacturingStory() {
             <span>{chapters[active].annotation}</span>
           </div>
           <div className="story-viewer-controls">
-            {[0, 3, 4].includes(active) && <button
-              type="button"
-              aria-pressed={exploded}
-              onClick={() => setExploded((value) => !value)}
-              disabled={status !== 'ready'}
-            >
-              {exploded ? 'Assemble view' : 'Explode view'}{' '}
-              <span aria-hidden="true">↗</span>
-            </button>}
+            {[0, 3, 4].includes(active) && (
+              <button
+                type="button"
+                aria-pressed={exploded}
+                onClick={() => setExploded((value) => !value)}
+                disabled={status !== 'ready'}
+              >
+                {exploded ? 'Assemble view' : 'Explode view'}{' '}
+                <span aria-hidden="true">↗</span>
+              </button>
+            )}
             <button
               type="button"
               onClick={() => viewerRef.current?.resetView()}
@@ -245,13 +237,27 @@ export default function ManufacturingStory() {
             >
               Reset angle
             </button>
-            <button type="button" aria-label="Rotate model left" onClick={() => viewerRef.current?.rotate('left')} disabled={status !== 'ready'}>↶</button>
-            <button type="button" aria-label="Rotate model right" onClick={() => viewerRef.current?.rotate('right')} disabled={status !== 'ready'}>↷</button>
+            <button
+              type="button"
+              aria-label="Rotate model left"
+              onClick={() => viewerRef.current?.rotate('left')}
+              disabled={status !== 'ready'}
+            >
+              ↶
+            </button>
+            <button
+              type="button"
+              aria-label="Rotate model right"
+              onClick={() => viewerRef.current?.rotate('right')}
+              disabled={status !== 'ready'}
+            >
+              ↷
+            </button>
           </div>
           <p className="story-model-note">
-            Illustrative models · not production drawings.{' '}
+            Illustrative model · not a production drawing.{' '}
             {status === 'ready' &&
-              'Rotate with the buttons, mouse drag, or arrow keys when the view is focused.'}
+              'Drag, use the buttons, or focus the view and use arrow keys to rotate.'}
           </p>
           <div
             className="story-stage-nav"
@@ -282,10 +288,26 @@ export default function ManufacturingStory() {
               id={chapter.id}
             >
               <p className="eyebrow">
-                0{index + 1} / {chapter.label}
+                {index === 0
+                  ? 'Manufacturing / Since 2011'
+                  : `0${index + 1} / ${chapter.label}`}
               </p>
-              <h3>{chapter.heading}</h3>
+              {index === 0 ? (
+                <h1 id="story-heading">{chapter.heading}</h1>
+              ) : (
+                <h3>{chapter.heading}</h3>
+              )}
               <p>{chapter.text}</p>
+              {index === 0 && (
+                <div className="story-hero-actions">
+                  <a href="#contact">
+                    Discuss your component <span aria-hidden="true">↗</span>
+                  </a>
+                  <a href="#sheet-blank">
+                    Explore the process <span aria-hidden="true">↓</span>
+                  </a>
+                </div>
+              )}
               <p className="story-detail">{chapter.detail}</p>
               <ul>
                 {chapter.tags.map((tag) => (
